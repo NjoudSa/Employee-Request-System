@@ -1,0 +1,278 @@
+<title>Employee Request Management System</title>
+
+<link rel="stylesheet" href="style.css">
+<header class="header">
+    <h1>Employee Request Management System</h1>
+    <p>Manage and track employee requests easily.</p>
+</header>
+
+
+<main class="container">
+
+    <!-- Dashboard -->
+
+    <section class="cards">
+
+        <div class="card">
+            <h3>Total Requests</h3>
+            <p id="totalRequests">2</p>
+        </div>
+
+        <div class="card">
+            <h3>New</h3>
+            <p id="newRequests">1</p>
+        </div>
+
+        <div class="card">
+            <h3>In Progress</h3>
+            <p id="inProgressRequests">1</p>
+        </div>
+
+        <div class="card">
+            <h3>Completed</h3>
+            <p id="completedRequests">0</p>
+        </div>
+
+    </section>
+
+
+    <!-- Requests -->
+
+    <section class="requests">
+
+        <div class="requests-header">
+
+            <h2>Recent Requests</h2>
+
+            <button id="openRequestBtn" type="button">
+                + New Request
+            </button>
+
+        </div>
+
+
+        <!-- New Request Form -->
+
+        <div id="requestForm" class="request-form">
+
+            <h2>Create New Request</h2>
+
+            <label for="employeeName">
+                Employee Name
+            </label>
+
+            <input
+                type="text"
+                id="employeeName"
+                placeholder="Enter employee name"
+            >
+
+
+            <label for="requestType">
+                Request Type
+            </label>
+
+            <select id="requestType">
+
+                <option value="">
+                    Select request type
+                </option>
+
+                <option value="IT Support">
+                    IT Support
+                </option>
+
+                <option value="HR">
+                    HR
+                </option>
+
+                <option value="Equipment">
+                    Equipment
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <label for="requestTitle">
+                Request Title
+            </label>
+
+            <input
+                type="text"
+                id="requestTitle"
+                placeholder="Enter request title"
+            >
+
+
+            <label for="description">
+                Description
+            </label>
+
+            <textarea
+                id="description"
+                placeholder="Describe your request"
+            ></textarea>
+
+
+            <label for="priority">
+                Priority
+            </label>
+
+            <select id="priority">
+
+                <option value="">
+                    Select priority
+                </option>
+
+                <option value="Low">
+                    Low
+                </option>
+
+                <option value="Medium">
+                    Medium
+                </option>
+
+                <option value="High">
+                    High
+                </option>
+
+            </select>
+
+
+            <div class="form-buttons">
+
+                <button id="cancelBtn" type="button">
+                    Cancel
+                </button>
+
+                <button id="submitBtn" type="button">
+                    Submit Request
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Requests Table -->
+
+        <div class="table-container">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Employee</th>
+                        <th>Request</th>
+                        <th>Type</th>
+                        <th>Priority</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="requestsTable">
+
+                    <tr data-status="New">
+
+                        <td>Ahmed</td>
+
+                        <td>Laptop Request</td>
+
+                        <td>Equipment</td>
+
+                        <td>High</td>
+
+                        <td>
+ <select class="status-select">
+
+                                <option value="New" selected>
+                                    New
+                                </option>
+
+                                <option value="In Progress">
+                                    In Progress
+                                </option>
+
+                                <option value="Completed">
+                                    Completed
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="delete-btn"
+                                type="button">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr data-status="In Progress">
+
+                        <td>Sarah</td>
+
+                        <td>Password Reset</td>
+
+                        <td>IT Support</td>
+
+                        <td>Medium</td>
+
+                        <td>
+
+                            <select class="status-select">
+
+                                <option value="New">
+                                    New
+                                </option>
+
+                                <option value="In Progress" selected>
+                                    In Progress
+                                </option>
+
+                                <option value="Completed">
+                                    Completed
+                                </option>
+
+                            </select>
+
+                        </td>
+
+                        <td>
+
+                            <button
+                                class="delete-btn"
+                                type="button">
+                                Delete
+                            </button>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
